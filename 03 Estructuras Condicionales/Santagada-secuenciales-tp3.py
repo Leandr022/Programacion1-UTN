@@ -165,7 +165,8 @@ else:
     elif (mes == 6 and dia >= 21) or (7 <= mes <= 8) or (mes == 9 and dia <= 20):
         estacion_norte = "Verano"
         estacion_sur = "Invierno"
-    else:  # (mes == 9 and dia >= 21) or (10 <= mes <= 11) or (mes == 12 and dia <= 20)
+    else:  
+        (mes == 9 and dia >= 21) or (10 <= mes <= 11) or (mes == 12 and dia <= 20)
         estacion_norte = "Otoño"
         estacion_sur = "Primavera"
 
