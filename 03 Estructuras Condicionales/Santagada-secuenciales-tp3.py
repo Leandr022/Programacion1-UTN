@@ -36,7 +36,7 @@ else:
 edad = int(input("Por favor, ingresa tu edad: "))
 
 # Verificamos a qué categoría pertenece según su edad
-if edad < 12:
+if edad >= 0 and edad < 12 :
     print("Niño/a")
 elif edad >= 12 and edad < 18:
     print("Adolescente")
@@ -46,7 +46,7 @@ else:
     print("Adulto/a")
 
 #EJERCICIO 5
-# Pedimos al usuario que ingrese una contraseña
+# Pedimos al usuario que ingrese una contraseña entre 8 y 14 caracteres como maximo
 contraseña = input("Por favor, ingrese una contraseña (entre 8 y 14 caracteres): ")
 
 # Verificamos si la longitud de la contraseña está dentro del rango permitido usando len()
@@ -70,17 +70,13 @@ moda = mode(numeros_aleatorios)
 mediana = median(numeros_aleatorios)
 media = mean(numeros_aleatorios)
 
-# Mostramos los valores calculados
-print(f"Números aleatorios: {numeros_aleatorios}")
-print(f"Moda: {moda}")
-print(f"Mediana: {mediana}")
-print(f"Media: {media}")
-
 # Determinamos el tipo de sesgo según los criterios dados
 if media > mediana > moda:
     print("La distribución tiene sesgo positivo (a la derecha).")
 elif media < mediana < moda:
     print("La distribución tiene sesgo negativo (a la izquierda).")
+elif media == mediana == moda:
+    print ("Sin sesgo")
 else:
     print("La distribución no tiene sesgo.")
 
@@ -89,12 +85,14 @@ else:
 texto = input("Ingrese una frase o palabra sin mayusculas: ")
 
 # Definimos las vocales
-vocales = "aeiou"
+vocales = "aeiouAEIOU"
 
 # Verificamos si el último carácter del texto es una vocal
 if texto[-1] in vocales:
+    print(f"{texto}.")
 
 # Imprimimos el resultado
+else:
     print("Resultado:", texto)
 
 #EJERCICIO 8
@@ -123,21 +121,21 @@ print("Resultado:", resultado)
 
 #EJERCICIO 9
 # Pedimos al usuario que ingrese la magnitud del terremoto y la convertimos a un número decimal
-magnitud = float(input("Ingrese la magnitud del terremoto según la escala de Richter: "))
+magnitud_terremoto = float(input("Ingrese la magnitud del terremoto según la escala de Richter: "))
 
 # Clasificamos la magnitud en una categoría según la escala de Richter
-if magnitud < 3:
+if magnitud_terremoto < 3:
     categoria = "Muy leve (imperceptible)"
-elif magnitud >= 3 and magnitud < 4:
+elif magnitud_terremoto >= 3 and magnitud_terremoto < 4:
     categoria = "Leve (ligeramente perceptible)"
-elif magnitud >= 4 and magnitud < 5:
+elif magnitud_terremoto >= 4 and magnitud_terremoto < 5:
     categoria = "Moderado (sentido por personas, pero generalmente no causa daños)"
-elif magnitud >= 5 and magnitud < 6:
+elif magnitud_terremoto >= 5 and magnitud_terremoto < 6:
     categoria = "Fuerte (puede causar daños en estructuras débiles)"
-elif magnitud >= 6 and magnitud < 7:
+elif magnitud_terremoto >= 6 and magnitud_terremoto < 7:
     categoria = "Muy Fuerte (puede causar daños significativos)"
 else: 
-    magnitud >= 7
+    magnitud_terremoto >= 7
     categoria = "Extremo (puede causar graves daños a gran escala)"
 
 # Imprimimos la clasificación correspondiente
