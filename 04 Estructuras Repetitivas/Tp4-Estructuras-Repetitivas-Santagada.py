@@ -1,3 +1,6 @@
+#EJERCICIO 1
+
+#En la funcion range incluimos el 101 ya que nos va a incluir hasta el 100 porque el superior no se cuenta
 for numero in range(101):
     print(numero)
 
