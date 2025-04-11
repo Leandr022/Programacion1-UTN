@@ -1,11 +1,29 @@
-# Programa para imprimir números enteros de 0 a 100
-
-# Utilizamos un bucle FOR para iterar a través de la secuencia de números.
-# La función range(101) genera una secuencia de números desde 0 hasta 100
-# (el límite superior no se incluye, por eso ponemos 101).
 for numero in range(101):
-    # La función print() se utiliza para mostrar el valor de la variable 'numero'
-    # en la pantalla. Cada llamada a print() genera una nueva línea.
     print(numero)
 
-# Fin del programa
+# EJERCICIO 2
+
+# Solicitar un número entero al usuario
+numero = input("Ingresa un número entero positivo: ")
+
+# Asegurarnos de que el número ingresado sea un número entero positivo
+if numero.isdigit():
+    # Contar la cantidad de dígitos
+    cantidad_digitos = len(numero)
+    print(f"El número tiene {cantidad_digitos} dígitos.")
+else:
+    print("Por favor ingresa un número entero válido.")
+
+# EJERCICIO 3
+
+# Solicitar los dos valores al usuario
+valor1 = int(input("Ingresa el primer valor: "))
+valor2 = int(input("Ingresa el segundo valor: "))
+
+# Asegurarse de que valor1 sea menor que valor2 para que la suma sea correcta
+if valor1 < valor2:
+    # Sumar los números entre valor1 y valor2, excluyendo ambos
+    suma = sum(range(valor1 + 1, valor2))  # Usamos valor1 + 1 para excluir valor1 y valor2 para excluir valor2
+    print(f"La suma de los números entre {valor1} y {valor2} es: {suma}")
+else:
+    print("El primer valor debe ser menor que el segundo valor.")
