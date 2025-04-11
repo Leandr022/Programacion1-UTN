@@ -30,3 +30,19 @@ if valor1 < valor2:
     print(f"La suma de los números entre {valor1} y {valor2} es: {suma}")
 else:
     print("El primer valor debe ser menor que el segundo valor.")
+
+
+#EJERCICIO 4
+
+# Inicializamos la suma acumulada
+suma_total = 0
+
+# Inicializamos el número con un valor distinto de 0 para entrar al bucle
+numero = -1
+
+while numero != 0:
+    numero = int(input("Ingresa un número entero (0 para terminar): "))
+    if numero != 0:
+        suma_total += numero
+
+print(f"La suma total es: {suma_total}")
