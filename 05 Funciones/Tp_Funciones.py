@@ -38,15 +38,15 @@ informacion_personal(nombre_usuario, apellido_usuario, edad_usuario, residencia_
 
 #EJERCICIO 4
 
-import math
+PI= 3.14
 
 # Función para calcular el área del círculo
 def calcular_area_circulo(radio):
-    return math.pi * radio**2
+    return PI * radio**2
 
 # Función para calcular el perímetro del círculo
 def calcular_perimetro_circulo(radio):
-    return 2 * math.pi * radio
+    return 2 * PI * radio
 
 # Programa principal
 radio_usuario = float(input("¿Cuál es el radio del círculo? "))
@@ -83,10 +83,8 @@ def tabla_multiplicar(numero):
     for i in range(1, 11):  # Itera desde 1 hasta 10
         print(f"{numero} x {i} = {numero * i}")
 
-# Programa principal
+# Programa principal y lamar a la función con el número ingresado
 numero_usuario = int(input("¿De qué número quieres la tabla de multiplicar? "))
-
-# Llamar a la función con el número ingresado
 tabla_multiplicar(numero_usuario)
 
 
@@ -110,14 +108,14 @@ a = float(input("Ingresa el primer número: "))
 b = float(input("Ingresa el segundo número: "))
 
 # Llamar a la función con los números ingresados
-resultados = operaciones_basicas(a, b)
+suma,resta,multiplicacion,division = operaciones_basicas(a, b)
 
 # Mostrar los resultados de manera clara
 print(f"\nResultados de las operaciones con {a} y {b}:")
-print(f"Suma: {resultados[0]}")
-print(f"Resta: {resultados[1]}")
-print(f"Multiplicación: {resultados[2]}")
-print(f"División: {resultados[3]}")
+print(f"Suma: {suma}")
+print(f"Resta: {resta}")
+print(f"Multiplicación: {multiplicacion}")
+print(f"División: {division}")
 
 
 #EJERCICIO 8
